@@ -1,6 +1,6 @@
 function fetchRate() {
 
-    fetch(`../src/controllers/rateRouter.php?mostLiked="ok"`)
+    fetch(`products/mostliked`)
 
         .then((response) => {
             return response.json()
@@ -20,7 +20,7 @@ function fetchRate() {
               div.classList.add('gridProduct');
               div.innerHTML = `
                 <div class="productImg">
-                    <img src="./../uploads/${product.image_pro}" alt="${product.name_pro}">
+                    <img src="public/img/products/${product.image_pro}" alt="${product.name_pro}">
                 </div>
                 <div class=">productTitle">
                     <h3>${product.name_pro}</h3>

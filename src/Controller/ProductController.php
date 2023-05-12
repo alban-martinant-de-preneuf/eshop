@@ -1,6 +1,6 @@
 <?php
 
-namespace src\controllers;
+namespace App\Controller;
 
 use src\Classes\Product;
 
@@ -58,5 +58,9 @@ class ProductController
     {
         $offset = ($page - 1) * 8;
         $this->product->displayFilter(explode(",", $categories), explode(",", $origins), $offset);
+    }
+
+    public function getSearchProducts($search) {
+        echo json_encode($this->product->getSearchProduct($search));
     }
 }

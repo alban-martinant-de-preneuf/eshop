@@ -95,6 +95,7 @@ class Product
     $reqSearch->execute();
     return $reqSearch->fetchAll(\PDO::FETCH_ASSOC);
 }
+
     public function getAllProductData()
     {
 

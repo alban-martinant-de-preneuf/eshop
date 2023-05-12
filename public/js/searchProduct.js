@@ -22,7 +22,8 @@ searchForm.addEventListener('input', async (e) => {
     // if minimum 2 character
     if(articleSearch.length > 1){
 
-        let search = await fetch('./../src/model/homeSearch.php?search=' + articleSearch);
+        let search = await fetch('search/' + articleSearch);
+        // let search = await fetch('./../src/model/homeSearch.php?search=' + articleSearch);
 
         let data = await search.json();
         

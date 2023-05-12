@@ -76,6 +76,6 @@ if (isset($_SESSION["user"])) {
     </div>
 </div>
 
-<script defer src="./../src/controllers/searchProduct.js" defer></script>
+<script defer src="public/js/searchProduct.js" defer></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

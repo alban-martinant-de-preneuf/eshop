@@ -1,5 +1,7 @@
 <?php
-session_start();
+
+namespace App\View;
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,7 +21,7 @@ session_start();
 </head>
 
 <body>
-    <?php require_once "./src/view/includes/header.php" ?>
+    <?php require_once "src/View/includes/header.php" ?>
     <main>
 
         <div id="displayResult"></div>
@@ -66,7 +68,7 @@ session_start();
 
         </div>
     </div>
-    <?php require_once "./src/view/includes/footer.php" ?>
+    <?php require_once "src/View/includes/footer.php" ?>
 
 </body>
 
