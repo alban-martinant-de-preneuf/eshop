@@ -21,51 +21,51 @@ namespace App\View;
 </head>
 
 <body>
-    <?php require_once "src/View/includes/header.php" ?>
-    <main>
 
-        <div id="displayResult"></div>
+    <div id="main_contener">
+
+        <?php require_once "src/View/includes/header.php" ?>
+        <main>
+
+            <div id="displayResult"></div>
+
+            <div id="formDisplay">
+                <div class="background">
+                    <img src="./public/img/homepage.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h1>START YOUR DAY WITH OUR COFFEE</h1>
+                </div>
+            </div>
+        </main>
+        <div class="aboutShop">
+            <div class="displayAboutShop">
+
+                <div class="aboutshopTextLeft">
+                    <p>You’ll be greeted by stunning smells of our coffee beans, exquisite flavors and rich, smooth textures.</p>
+                    <hr>
+                </div>
+                <div class="imgRight">
+                    <img src="./public/img/coffeeFarm.jpeg">
+                </div>
+            </div>
+            <div class="displayAboutShop">
+                <div class="imgLeft">
+                    <img src="./public/img/freshcoffeebean.webp">
+                </div>
+                <div class="aboutshopTextRight">
+                    <p>We’re commited to using only the freshest, highest quality for our shop, our beans are carefully selected from the finest coffee-growing regions around the world.</p>
+                    <hr>
+                </div>
+            </div>
         </div>
+        <div class="mostLiked">
+            <h1 class="indexTitle">YOUR FAVORITE BEANS</h1>
+            <div class="grid-container">
 
-        <div id="formDisplay">
-            <div class="background">
-                <img src="./public/img/homepage.jpg" alt="">
-            </div>
-            <div class="title">
-                <h1>START YOUR DAY WITH OUR COFFEE</h1>
-            </div>
-        </div>
-    </main>
-    <div class="aboutShop">
-        <div class="displayAboutShop">
-
-            <div class="aboutshopTextLeft">
-                <p>You’ll be greeted by stunning smells of our coffee beans, exquisite flavors and rich, smooth textures.</p>
-                <hr>
-            </div>
-            <div class="imgRight">
-                <img src="./public/img/coffeeFarm.jpeg">
-            </div>
-        </div>
-        <div class="displayAboutShop">
-            <div class="imgLeft">
-                <img src="./public/img/freshcoffeebean.webp">
-            </div>
-            <div class="aboutshopTextRight">
-                <p>We’re commited to using only the freshest, highest quality for our shop, our beans are carefully selected from the finest coffee-growing regions around the world.</p>
-                <hr>
-            </div>
-        </div>
-    </div>
-    <div class="mostLiked">
-        <h1 class ="indexTitle">YOUR FAVORITE BEANS</h1>
-        <div class="grid-container">
-
-            <div class="gridProduct">
-
+                <div class="gridProduct"></div>
 
             </div>
-
         </div>
     </div>
     <?php require_once "src/View/includes/footer.php" ?>

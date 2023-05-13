@@ -1,5 +1,4 @@
 <?php
-session_start();
 // Create or increment the navigation page number
 // get the page number and store it in a global session variable
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;

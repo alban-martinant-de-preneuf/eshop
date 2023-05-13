@@ -39,12 +39,15 @@ if (isset($_SESSION["user"])) {
     </div>
 
     <div class="bottom_part">
+        <!-- <a href="home">Home</a>
+        <a href="shop">Shop</a> -->
         <a href="home">Home</a>
         <a href="shop">Shop</a>
         <?php if (isset($_SESSION["user"])) : ?>
             <a href="cart">Cart</a>
         <?php endif ?>
-        <a href="about">About</a>
+        <!-- <a href="about">About</a> -->
+        <button id="about">About</button>
         <a href="contact">Contact</a>
         <div id="search">
 
@@ -76,6 +79,7 @@ if (isset($_SESSION["user"])) {
     </div>
 </div>
 
+<script src="public/js/header.js"></script>
 <script defer src="public/js/searchProduct.js" defer></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
