@@ -19,7 +19,7 @@ if (isset($_SESSION["user"])) {
                         <ul>
                             <?php if (isset($_SESSION["user"])) : ?>
                                 <?php if (!isset($_SESSION['user']['role']) || $_SESSION['user']['role'] !== 'admin') : ?>
-                                    <li><a href="profil.php">Profil</a></li>
+                                    <li><a href="profile">Profil</a></li>
                                 <?php else : ?>
                                     <li><a href="admin.php">Admin</a></li>
                                 <?php endif ?>
@@ -39,13 +39,13 @@ if (isset($_SESSION["user"])) {
     </div>
 
     <div class="bottom_part">
-        <a href="index.php">Home</a>
-        <a href="shop.php">Shop</a>
+        <a href="home">Home</a>
+        <a href="shop">Shop</a>
         <?php if (isset($_SESSION["user"])) : ?>
-            <a href="cart.php">Cart</a>
+            <a href="cart">Cart</a>
         <?php endif ?>
-        <a href="about.php">About</a>
-        <a href="contact.php">Contact</a>
+        <a href="about">About</a>
+        <a href="contact">Contact</a>
         <div id="search">
 
             <form action="./../src/controllers/searchProduct.js" method="get" id="searchForm">
@@ -67,11 +67,11 @@ if (isset($_SESSION["user"])) {
             <span class="line line3"></span>
         </div>
         <div class="menu-items">
-            <li><a href="../view/index.php">Home</a></li>
-            <li><a href="../view/about.php">About</a></li>
-            <li><a href="../view/shop.php">Shop</a></li>
-            <li><a href="../view/cart.php">Cart</a></li>
-            <li><a href="../view/contact.php">Contact</a></li>
+            <li><a href="home">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="shop">Shop</a></li>
+            <li><a href="cart">Cart</a></li>
+            <li><a href="contact">Contact</a></li>
         </div>
     </div>
 </div>

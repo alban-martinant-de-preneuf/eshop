@@ -4,6 +4,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 session_start();
 
+use App\Controller\HomeController;
 use App\Controller\ProductController;
 
 $router = new AltoRouter();
@@ -22,6 +23,35 @@ $router->map('GET', '/products/mostliked', function() {
 $router->map('GET', '/search/[a:search]', function($search) {
     $productController = new ProductController();
     $productController->getSearchProducts($search);
+});
+
+$router->map('GET', '/profile', function() {
+    echo "ok";
+});
+
+$router->map('GET', '/home', function() {
+    $homeController = new HomeController();
+    $homeController->getHome();
+});
+
+$router->map('GET', '/shop', function() {
+    $homeController = new HomeController();
+    $homeController->getShop();
+});
+
+$router->map('GET', '/cart', function() {
+    $homeController = new HomeController();
+    $homeController->getCart();
+});
+
+$router->map('GET', '/about', function() {
+    $homeController = new HomeController();
+    $homeController->getAbout();
+});
+
+$router->map('GET', '/contact', function() {
+    $homeController = new HomeController();
+    $homeController->getContact();
 });
 
 // match current request url
