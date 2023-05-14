@@ -1,4 +1,8 @@
-let currentPage = 1;
+function shop() {
+  let currentPage = 1;
+  fetchCategory();
+  fetchOrigin();
+}
 
 function fetchCategory() {
   fetch(`../src/controllers/rateRouter.php?fetchCategory="ok"`)
@@ -179,5 +183,26 @@ function createCheckbox(value, type) {
   return input;
 }
 
-fetchCategory();
-fetchOrigin();
+function getStarRating(rating) {
+  const maxRating = 5;
+  const fullStarCount = Math.floor(rating);
+  const halfStarCount = Math.round(rating - fullStarCount);
+  const emptyStarCount = maxRating - fullStarCount - halfStarCount;
+  let starRating = '';
+
+  if (fullStarCount >= 1) {
+      for (let i = 0; i < fullStarCount; i++) {
+          starRating += '<i class="fas fa-star"></i>';
+      }
+
+      for (let i = 0; i < halfStarCount; i++) {
+          starRating += '<i class="fas fa-star-half-alt"></i>';
+      }
+
+      for (let i = 0; i < emptyStarCount; i++) {
+          starRating += '<i class="far fa-star"></i>';
+      }
+  }
+
+  return starRating;
+}

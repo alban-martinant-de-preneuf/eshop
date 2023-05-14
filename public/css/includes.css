@@ -19,10 +19,14 @@ nav{
     justify-content: space-around;
     padding: 2%;
 }
-.bottom_part a{
-    text-decoration: none;
+.bottom_part a,
+.bottom_part button {
+    background: none;
+    border: none;
+    font: inherit;
     color: black;
     font-size: 28px; 
+    cursor: pointer;
 }
 
 .logo_part{

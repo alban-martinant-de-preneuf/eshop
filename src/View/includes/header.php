@@ -19,9 +19,9 @@ if (isset($_SESSION["user"])) {
                         <ul>
                             <?php if (isset($_SESSION["user"])) : ?>
                                 <?php if (!isset($_SESSION['user']['role']) || $_SESSION['user']['role'] !== 'admin') : ?>
-                                    <li><a href="profile">Profil</a></li>
+                                    <li><button id="profile">Profil</button></li>
                                 <?php else : ?>
-                                    <li><a href="admin.php">Admin</a></li>
+                                    <li><button id="admin.php">Admin</button></li>
                                 <?php endif ?>
                                 <form method="post">
                                     <li><button name="deco" id="decoBtn">Deconnexion</button></li>
@@ -41,14 +41,14 @@ if (isset($_SESSION["user"])) {
     <div class="bottom_part">
         <!-- <a href="home">Home</a>
         <a href="shop">Shop</a> -->
-        <a href="home">Home</a>
-        <a href="shop">Shop</a>
+        <button id="home">Home</button>
+        <button id="shop">Shop</button>
         <?php if (isset($_SESSION["user"])) : ?>
-            <a href="cart">Cart</a>
+            <button id="cart">Cart</button>
         <?php endif ?>
         <!-- <a href="about">About</a> -->
         <button id="about">About</button>
-        <a href="contact">Contact</a>
+        <button id="contact">Contact</button>
         <div id="search">
 
             <form action="./../src/controllers/searchProduct.js" method="get" id="searchForm">
@@ -70,16 +70,12 @@ if (isset($_SESSION["user"])) {
             <span class="line line3"></span>
         </div>
         <div class="menu-items">
-            <li><a href="home">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li><a href="shop">Shop</a></li>
-            <li><a href="cart">Cart</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li><button id="home">Home</button></li>
+            <li><button id="about">About</button></li>
+            <li><button id="shop">Shop</button></li>
+            <li><button id="cart">Cart</button></li>
+            <li><button id="contact">Contact</button></li>
         </div>
     </div>
 </div>
-
-<script src="public/js/header.js"></script>
-<script defer src="public/js/searchProduct.js" defer></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

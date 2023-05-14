@@ -14,17 +14,24 @@ namespace App\View;
     <link rel="stylesheet" href="public/css/contact.css">
     <link rel="stylesheet" href="public/css/includes.css">
     <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/shop.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <title>Home</title>
     <script src="public/js/auth.js" defer></script>
     <script src="public/js/index.js" defer></script>
+    <script src="public/js/header.js" defer></script>
+    <script src="public/js/searchProduct.js" defer></script>
+    <script type="text/javascript" src="public/js/filter.js" defer></script>
+    <script type="text/javascript" src="public/js/shop.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </head>
 
 <body>
 
-    <div id="main_contener">
+    <?php require_once "src/View/includes/header.php" ?>
 
-        <?php require_once "src/View/includes/header.php" ?>
+    <div id="main_contener">
         <main>
 
             <div id="displayResult"></div>
