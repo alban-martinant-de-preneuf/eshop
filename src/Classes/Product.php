@@ -187,7 +187,7 @@ class Product
         $select = "SELECT DISTINCT category_pro FROM product";
         $prepare = DbConnection::getDb()->prepare($select);
         $prepare->execute();
-        $result = $prepare->fetchAll(\PDO::FETCH_ASSOC);
+        $result = $prepare->fetchAll(\PDO::FETCH_COLUMN);
         echo json_encode($result);
     }
 
@@ -196,7 +196,7 @@ class Product
         $select = "SELECT DISTINCT origin_pro FROM product";
         $prepare = DbConnection::getDb()->prepare($select);
         $prepare->execute();
-        $result = $prepare->fetchAll(\PDO::FETCH_ASSOC);
+        $result = $prepare->fetchAll(\PDO::FETCH_COLUMN);
         echo json_encode($result);
     }
 
