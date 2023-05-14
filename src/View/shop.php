@@ -11,17 +11,14 @@ $_SESSION['page'] = $page;
     <div class="container">
 
         <div class="page">
-            <a href="shop.php?page=<?php echo $page + 1 ?>">
-                <button class="btn next_button button-59">
-                    Next Page >>
-                </button>
-            </a>
-            <a href="shop.php?page=<?php echo $page - 1 ?>">
-                <button class="btn prev_button button-59">
-                    << Previous Page </button>
-            </a>
-
+            <div>
+                <button class="btn prev_button button-59"> << Previous Page </button>
+            </div>
+            <div>
+                <button class="btn next_button button-59"> Next Page >> </button>
+            </div>
         </div>
+
         <div class="filter">
             <form id="selectCategory">
                 <div id="categoryDiv">
@@ -39,12 +36,14 @@ $_SESSION['page'] = $page;
             <!-- Display products whith api fetch -->
         </div>
 
+        <div class="page">
+            <div>
+                <button class="btn prev_button button-59"> << Previous Page </button>
+            </div>
+            <div>
+                <button class="btn next_button button-59"> Next Page >> </button>
+            </div>
+        </div>
+
     </div>
-
-    <div class="page">
-        <button class="btn next_button button-59"><a href="shop.php?page=<?php echo $page + 1 ?>">Next Page >></a></button>
-        <button class="btn prev_button button-59"><a href="shop.php?page=<?php echo $page - 1 ?>"><< Previous Page</a></button>
-
-    </div>
-
 </main>

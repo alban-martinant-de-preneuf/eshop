@@ -1,11 +1,12 @@
 let allCategories = [];
 let allOrigins = [];
+let currentPage = 1;
 
 async function shop() {
-    let currentPage = 1;
+    currentPage = 1;
     await fetchCategory();
     await fetchOrigin();
-    postFilter(currentPage);
+    postFilter();
 }
 
 async function fetchCategory() {
@@ -27,7 +28,7 @@ async function fetchCategory() {
 
         input.addEventListener('change', () => {
             currentPage = 1;
-            postFilter(currentPage);
+            postFilter();
 
         });
     });
@@ -53,13 +54,13 @@ async function fetchOrigin() {
 
         input.addEventListener('change', (event) => {
             currentPage = 1;
-            postFilter(currentPage);
+            postFilter();
         });
     });
 
 }
 
-function postFilter(currentPage) {
+function postFilter() {
 
     const checkboxesCheckedCategory = document.querySelectorAll('#categoryDiv input[type="checkbox"]:checked');
     const checkboxesCheckedOrigin = document.querySelectorAll('#originDiv input[type="checkbox"]:checked');
@@ -74,12 +75,8 @@ function postFilter(currentPage) {
         checkedOrigins.push(origin.getAttribute('name'));
     })
 
-    console.log(allCategories);
-
     categoriesToDisplay = checkedCategories.length === 0 ? allCategories : checkedCategories;
     originsToDisplay = checkedOrigins.length === 0 ? allOrigins : checkedOrigins;
-
-    console.log(categoriesToDisplay, originsToDisplay);
 
     let data = new FormData();
     data.append("filterCategory", categoriesToDisplay);
@@ -116,14 +113,12 @@ function postFilter(currentPage) {
             });
             shop.innerHTML = html;
             isEnd = (products.length < 8);
-            console.log(document.readyState)
             changeButton(isEnd);
 
         });
 }
 
 function changeButton(isEnd) {
-    console.log('button');
     if (typeof (nextBtns) === 'undefined') {
         nextBtns = document.querySelectorAll('.next_button');
         nextBtns.forEach(button => {
@@ -135,28 +130,27 @@ function changeButton(isEnd) {
                 } else {
                     button.style.display = "inlineBlock";
                 }
-                postFilter(currentPage);
+                postFilter();
             })
         })
-    } else {
-        nextBtns.forEach(button => {
-            button.style.display = isEnd ? 'none' : 'block';
-        })
     }
+    nextBtns.forEach(button => {
+        button.style.display = isEnd ? 'none' : 'block';
+    })
+
     if (typeof (prevBtns) === 'undefined') {
         prevBtns = document.querySelectorAll('.prev_button');
         prevBtns.forEach(button => {
             button.addEventListener("click", e => {
                 e.preventDefault();
                 currentPage -= 1;
-                postFilter(currentPage);
+                postFilter();
             })
         })
-    } else {
-        prevBtns.forEach(button => {
-            button.style.display = currentPage === 1 ? 'none' : 'block';
-        })
     }
+    prevBtns.forEach(button => {
+        button.style.display = currentPage === 1 ? 'none' : 'block';
+    })
 }
 
 function createCheckbox(value, type) {
