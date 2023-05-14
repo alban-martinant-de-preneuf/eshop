@@ -35,7 +35,7 @@ $_SESSION['page'] = $page;
                 </div>
             </form>
         </div>
-        <div class="shop" id="shop">
+        <div class="shop" id="shop_display">
             <!-- Display products whith api fetch -->
         </div>
 

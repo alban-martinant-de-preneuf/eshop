@@ -94,7 +94,7 @@ function postFilter(currentPage) {
             return response.json();
         })
         .then((products) => {
-            let shop = document.querySelector("#shop")
+            let shop = document.querySelector("#shop_display")
             let html = "";
             products.forEach((item) => {
 
@@ -116,11 +116,14 @@ function postFilter(currentPage) {
             });
             shop.innerHTML = html;
             isEnd = (products.length < 8);
+            console.log(document.readyState)
             changeButton(isEnd);
+
         });
 }
 
 function changeButton(isEnd) {
+    console.log('button');
     if (typeof (nextBtns) === 'undefined') {
         nextBtns = document.querySelectorAll('.next_button');
         nextBtns.forEach(button => {
