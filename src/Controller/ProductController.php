@@ -39,12 +39,12 @@ class ProductController
         return $this->product->selectMostLiked();
     }
 
-    public function getCategory()
+    public function getCategories()
     {
         return $this->product->selectAllCategory();
     }
 
-    public function getOrigin()
+    public function getOrigins()
     {
         return $this->product->selectAllOrigin();
     }

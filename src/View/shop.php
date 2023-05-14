@@ -48,5 +48,3 @@ $_SESSION['page'] = $page;
     </div>
 
 </main>
-<!-- <script type="text/javascript" src="public/js/filter.js"></script>
-<script type="text/javascript" src="public/js/shop.js"></script> -->

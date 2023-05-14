@@ -20,6 +20,17 @@ $router->map('GET', '/products/mostliked', function() {
     $productController->getMostLiked();
 });
 
+$router->map('GET', '/products/categories', function() {
+    $productController = new ProductController();
+    $productController->getCategories();
+});
+
+$router->map('GET', '/products/origins', function() {
+    $productController = new ProductController();
+    $productController->getOrigins();
+});
+
+
 $router->map('GET', '/search/[a:search]', function($search) {
     $productController = new ProductController();
     $productController->getSearchProducts($search);

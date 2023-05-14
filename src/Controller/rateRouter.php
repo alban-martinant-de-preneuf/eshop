@@ -1,8 +1,6 @@
 <?php
 
-namespace src\controllers;
-use src\controllers\ProductController;
-session_start();
+namespace App\Controller;
 
 require_once("./ProductController.php");
 
@@ -10,7 +8,6 @@ $productController = new ProductController();
 
 if(isset($_POST["addRate"])){
     $productController->addRate($_POST["rating"], $_SESSION["user"]["id"], $_POST["id_pro"]);
-    
 }
 
 if(isset($_GET["fetchRate"])){
@@ -22,11 +19,11 @@ if(isset($_GET["mostLiked"])){
 }
 
 if(isset($_GET["fetchCategory"])){
-    $productController->getCategory();
+    $productController->getCategories();
 }
 
 if(isset($_GET["fetchOrigin"])){
-    $productController->getOrigin();
+    $productController->getOrigins();
 }
 
 if (isset($_POST['filterCategory']) && isset($_POST['filterOrigin'])) {

@@ -21,7 +21,6 @@ namespace App\View;
     <script src="public/js/index.js" defer></script>
     <script src="public/js/header.js" defer></script>
     <script src="public/js/searchProduct.js" defer></script>
-    <script type="text/javascript" src="public/js/filter.js" defer></script>
     <script type="text/javascript" src="public/js/shop.js" defer></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
